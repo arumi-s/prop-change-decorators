@@ -1,0 +1,12 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"strict": false,
+		"strictPropertyInitialization": false,
+		"experimentalDecorators": true,
+		"sourceMap": false,
+		"removeComments": true,
+		"noImplicitAny": true
+	},
+	"exclude": ["node_modules"]
+}
