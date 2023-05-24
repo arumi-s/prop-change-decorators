@@ -5,7 +5,7 @@ import { ChangeDispatcher } from '../internals/ChangeDispatcher';
 
 class Entity {
 	@Dispatcher()
-	change$: ChangeDispatcher<Entity>;
+	readonly change$: ChangeDispatcher<Entity>;
 
 	@Clamp({ name: 'numberValue' })
 	private __numberValue__ = 0;

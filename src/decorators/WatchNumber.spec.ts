@@ -5,14 +5,14 @@ import { ChangeDispatcher } from '../internals/ChangeDispatcher';
 
 class Entity {
 	@Dispatcher()
-	change$: ChangeDispatcher<Entity>;
+	readonly change$: ChangeDispatcher<Entity>;
 
 	@WatchNumber({ name: 'numberValue' })
-	__numberValue__ = 0;
+	private __numberValue__ = 0;
 	numberValue: number;
 
 	@WatchNumber({ name: 'otherNumberValue' })
-	__otherNumberValue__ = -100;
+	private __otherNumberValue__ = -100;
 	otherNumberValue: number;
 }
 

@@ -5,16 +5,16 @@ import { ChangeDispatcher } from '../internals/ChangeDispatcher';
 
 class Entity {
 	@Dispatcher()
-	change$: ChangeDispatcher<Entity>;
+	readonly change$: ChangeDispatcher<Entity>;
 
 	@WatchBoolean({ name: 'boolValue' })
-	__boolValue__ = false;
+	private __boolValue__ = false;
 	boolValue: boolean;
 }
 
 class EntityWithoutChangeDispatcher {
 	@WatchBoolean({ name: 'boolValue' })
-	__boolValue__ = false;
+	private __boolValue__ = false;
 	boolValue: boolean;
 }
 

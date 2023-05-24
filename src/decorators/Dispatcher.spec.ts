@@ -4,7 +4,7 @@ import { ChangeDispatcher } from '../internals/ChangeDispatcher';
 
 class Entity {
 	@Dispatcher()
-	change$: ChangeDispatcher<Entity>;
+	readonly change$: ChangeDispatcher<Entity>;
 }
 
 describe('@ChangeDispatcher', () => {
